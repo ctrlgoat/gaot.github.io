@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 - Page Not Found</title>
+<style>
+  body {
+    font-family: serif;
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+  }
+  .content {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .link {
+    display: block;
+    background-color: #fff;
+    color: #0000ff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+  <div class="content">
+    <h1>404 - Page Not Found</h1>
+    <p>Oops! The page you're looking for doesn't exist.</p>
+    <a href="/" class="link" onmouseover="moveButton()">Return to home</a>
+  </div>
+  <script>
+    function moveButton() {
+      var button = document.querySelector('.link');
+      var maxX = 1280 - button.offsetWidth; // Limit the maximum X coordinate
+      var maxY = 720 - button.offsetHeight; // Limit the maximum Y coordinate
+      var newX = Math.random() * maxX;
+      var newY = Math.random() * maxY;
+      button.style.transform = 'translate(' + newX + 'px, ' + newY + 'px)';
+    }
+  </script>
+</body>
+</html>
